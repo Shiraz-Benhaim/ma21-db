@@ -53,7 +53,8 @@ public class TableHandler implements TableQueries {
             if (this.loadedTable == null) {
                 // TODO: load it and return it
             } else {
-                // TODO
+                SplitTable splitTable = new SplitTable();
+                return splitTable.split(this.loadedTable, columnsNames);
             }
         }
 
