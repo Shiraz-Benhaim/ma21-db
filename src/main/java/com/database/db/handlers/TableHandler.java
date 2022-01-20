@@ -1,5 +1,7 @@
 package com.database.db.handlers;
 
+import com.database.db.operators.filters.FilterBigger;
+import com.database.db.operators.filters.FilterSmaller;
 import com.database.db.utils.SplitTable;
 import com.database.db.modules.Item;
 import com.database.db.modules.Table;
@@ -17,8 +19,8 @@ import java.util.HashMap;
 public class TableHandler implements TableQueries {
     private final HashMap<OperatorType, FilterRecords> ACTIONS = new HashMap<>() {{
         put(OperatorType.EQUAL, new FilterEqual());
-        put(OperatorType.BIGGER, new FilterEqual());
-        put(OperatorType.SMALLER, new FilterEqual());
+        put(OperatorType.BIGGER, new FilterBigger());
+        put(OperatorType.SMALLER, new FilterSmaller());
     }};
 
     @NonNull

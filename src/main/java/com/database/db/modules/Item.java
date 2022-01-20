@@ -7,6 +7,6 @@ import java.lang.reflect.Type;
 
 @Data
 @AllArgsConstructor
-public class Item<T extends Type> {
+public class Item<T> {
     private T value;
 }
