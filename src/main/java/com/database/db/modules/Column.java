@@ -1,14 +1,13 @@
 package com.database.db.modules;
 
+import com.database.db.cellTypes.ItemType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
-import java.lang.reflect.Type;
 
 @Data
 @AllArgsConstructor
 public class Column {
     private String name;
-    private Type type;
+    private ItemType type;
     private Boolean isPK;
 }
